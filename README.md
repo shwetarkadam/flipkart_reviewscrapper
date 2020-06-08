@@ -1,6 +1,6 @@
 # Flipkart ReviewScrapper
 
-Hosted on [http://reviewscrapper-bold-grysbok-nk.cfapps.io/](http://reviewscrapper-bold-grysbok-nk.cfapps.io/) 
+Hosted on [http://reviewscrapper-bold-grysbok-nk.cfapps.io/](http://reviewscrapper-bold-grysbok-nk.cfapps.io/) <br/>
 The goal here originally was to create a dataset of flipkart reviews in the form of csv files  which can be further used for sentiment analysis. In addition, scrapped reviews are shown on the webpage using flask and csv files are formed when you execute this project in your system.
 
 # Project Flow:
@@ -18,14 +18,13 @@ E-->F[Display them on result.html page]
 
 # Prerequisites:
 
-The things needed for executing this  python based web scraper are:
-• Python (3.x) installed.
-• Anaconda installed.
+The things needed for executing this  python based web scraper are:<br/>
+• Python (3.x) installed.<br/>
+• Anaconda installed.<br/>
 • A Python IDE (Integrated Development Environment): like PyCharm, Spyder, or any
-other IDE of choice (Explained Later)
-• Flask Installed. (A simple command: pip install flask)
-• Basic understanding of Python and HTML.
-• Basic understanding of Git (download Git CLI from https://gitforwindows.org/ )
+other IDE of choice.<br/>
+• Flask Installed. (A simple command: pip install flask)<br/>
+• Basic understanding of Python and HTML.<br/>
 
 ## Steps to execute this project in Pycharm/Anaconda Environment:
 

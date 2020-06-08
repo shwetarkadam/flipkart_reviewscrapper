@@ -29,15 +29,15 @@ other IDE of choice (Explained Later)
 
 ## Steps to execute this project in Pycharm/Anaconda Environment:
 
-1.Create a new project in Pycharm.
-2.Make sure you select **New environment using :Conda**
-3.Click create and right click on the project name and select **Show In Explorer** option and go inside project name folder.
-4.Download this project and copy paste all these files into your flask project folder.
-5.Go to pycham terminal and type the following command 
+1.Create a new project in Pycharm.<br/>
+2.Make sure you select **New environment using :Conda**<br/>
+3.Click create and right click on the project name and select **Show In Explorer** option and go inside project name folder.<br/>
+4.Download this project and copy paste all these files into your flask project folder.<br/>
+5.Go to pycham terminal and type the following command:
 	
 	pip install -r requirements.txt
 	
-This command will install all the libraries such as flask,beautiful soup,etc. required to execute this project.
+This command will install all the libraries such as flask,beautiful soup,etc. required to execute this project.<br/>
 6.Right click on flask_app.py file and select Run option.
 ****
 

@@ -28,11 +28,11 @@ other IDE of choice.<br/>
 
 ## Steps to execute this project in Pycharm/Anaconda Environment:
 
-1.Create a new project in Pycharm.<br/>
-2.Make sure you select **New environment using :Conda**<br/>
-3.Click create and right click on the project name and select **Show In Explorer** option and go inside project name folder.<br/>
-4.Download this project and copy paste all these files into your flask project folder.<br/>
-5.Go to pycham terminal and type the following command:
+1. Create a new project in Pycharm.<br/>
+2. Make sure you select **New environment using :Conda**<br/>
+3. Click create and right click on the project name and select **Show In Explorer** option and go inside project name folder.<br/>
+4. Download this project and copy paste all these files into your flask project folder.<br/>
+5. Go to pycham terminal and type the following command:
 	
 	pip install -r requirements.txt
 	

@@ -21,31 +21,40 @@ def index():
     if request.method == 'POST':
         try:
             searchString = request.form['content'].replace(" ", "")
+            #print(searchString)
             flipkart_url = "https://www.flipkart.com/search?q=" + searchString
+            #print(flipkart_url)
             uClient = uReq(flipkart_url)
             flipkartPage = uClient.read()
+            #print(flipkartPage)
             uClient.close()
             flipkart_html = bs(flipkartPage, "html.parser")
-            bigboxes = flipkart_html.findAll("div", {"class": "bhgxx2 col-12-12"})
+            #print(flipkart_html)
+            bigboxes = flipkart_html.findAll("div", {"class": "_2pi5LC col-12-12"})
             del bigboxes[0:3]
             box = bigboxes[0]
+            #print(bigboxes[0])
             productLink = "https://www.flipkart.com" + box.div.div.div.a['href']
+            print("-------------Product html-------------")
+            #print(productLink)
             prodRes = requests.get(productLink)
-            prodRes.encoding = 'utf-8'
+            #prodRes.encoding = 'utf-8'
             prod_html = bs(prodRes.text, "html.parser")
-            print(prod_html)
-            commentboxes = prod_html.find_all('div', {'class': "_3nrCtb"})
-
+            #print(prod_html)
+            commentboxes = prod_html.find_all('div', {'class': "_16PBlm"})
+            print(commentboxes)
             filename = searchString + ".csv"
-            fw = open(filename, "w")
+            fw = open(filename, "w", encoding='utf-8')
             headers = "Product, Customer Name, Rating, Heading, Comment \n"
             fw.write(headers)
             reviews = []
+            print("Reached here -------------")
             for commentbox in commentboxes:
+                print(commentbox)
                 try:
-                    # name.encode(encoding='utf-8')
-                    name = commentbox.div.div.find_all('p', {'class': '_3LYOAd _3sxSiS'})[0].text
-
+                    #name.encode(encoding='utf-8')
+                    name = commentbox.div.div.find_all('p', {'class': '_3LWZlK _1BLPMq'})[0].text
+                    print(name)
                 except:
                     name = 'No Name'
 
@@ -74,6 +83,8 @@ def index():
                           "Comment": custComment}
                 reviews.append(mydict)
                 content = searchString + "," + name + "," + rating+","+commentHead+","+custComment
+                print("////////////////////")
+                print(content)
                 fw.write(content)
 
 
@@ -86,8 +97,8 @@ def index():
     else:
         return render_template('index.html')
 
-port = int(os.getenv("PORT")) #comment this while running in local
+#port = int(os.getenv("PORT")) #comment this while running in local
 if __name__ == "__main__":
-    #app.run(host='0.0.0.0', port=5000) #uncomment this while running in local
-    app.run(host='0.0.0.0', port=port) #comment this while running in local
+    app.run(host='0.0.0.0', port=5000,debug=True) #uncomment this while running in local
+    #app.run(host='0.0.0.0', port=port) #comment this while running in local
     # app.run(host='127.0.0.1', port=8001, debug=True) 

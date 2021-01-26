@@ -1,18 +1,17 @@
 # Flipkart ReviewScrapper
 
 Hosted on [http://reviewscrapper-bold-grysbok-nk.cfapps.io/](http://reviewscrapper-bold-grysbok-nk.cfapps.io/) <br/>
+The project is also pushed to docker hub so you can use the docker image here:-https://hub.docker.com/repository/docker/shwetakadam25/review-scrapper
+
 The goal here originally was to create a dataset of flipkart reviews in the form of csv files  which can be further used for sentiment analysis. In addition, scrapped reviews are shown on the webpage using flask and csv files are formed when you execute this project in your system.
 
 # Project Flow:
 
-```mermaid
-graph TD
-A[Search on UI i.e index.html based on some keyword such as 'oneplus']  --> B[Pass this keyword 'oneplus' to the flipkart search url ] 
-
-B --> C[Click on the first search result of flipkart]
-C-->D[Go to the product and navigate to the Review Section]
-D-->E[Scrap the reviews and write them in csv file ]
-E-->F[Display them on result.html page]
+Search on UI i.e index.html based on some keyword such as 'oneplus']  --> B[Pass this keyword 'oneplus' to the flipkart search url ] 
+Click on the first search result of flipkart]
+Go to the product and navigate to the Review Section]
+Scrap the reviews and write them in csv file ]
+Display them on result.html page]
 
 ```
 

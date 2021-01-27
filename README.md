@@ -1,6 +1,5 @@
 # Flipkart ReviewScrapper
 
-Hosted on [http://reviewscrapper-bold-grysbok-nk.cfapps.io/](http://reviewscrapper-bold-grysbok-nk.cfapps.io/) <br/>
 The project is also pushed to docker hub so you can use the docker image here:-https://hub.docker.com/repository/docker/shwetakadam25/review-scrapper
 
 The goal here originally was to create a dataset of flipkart reviews in the form of csv files  which can be further used for sentiment analysis. In addition, scrapped reviews are shown on the webpage using flask and csv files are formed when you execute this project in your system.

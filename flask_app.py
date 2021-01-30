@@ -40,7 +40,7 @@ def index():
             prodRes = requests.get(productLink)
             #prodRes.encoding = 'utf-8'
             prod_html = bs(prodRes.text, "html.parser")
-            #print(prod_html)
+            print(prod_html)
             commentboxes = prod_html.find_all('div', {'class': "_16PBlm"})
             print(commentboxes)
             filename = searchString + ".csv"
